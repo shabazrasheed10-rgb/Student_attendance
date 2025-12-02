@@ -471,7 +471,8 @@ const REAL_TODAY_KEY = getFormattedDateKey(new Date());
 let selectedSubject = localStorage.getItem("lastSubject") || ALL_SUBJECTS[0];
 let selectedGroup = localStorage.getItem("lastGroup") || ALL_GROUPS[0];
 // The currently active date key, defaults to today
-let activeDateKey = localStorage.getItem("lastDateKey") || REAL_TODAY_KEY;
+let activeDateKey = REAL_TODAY_KEY; // 
+localStorage.setItem("lastDateKey", REAL_TODAY_KEY);
 
 /* --- HELPER FUNCTIONS & HISTORY SETUP --- */
 function getFormattedDateKey(date) {
